@@ -4,7 +4,8 @@ const d = (value: string) => new Date(`${value}T00:00:00.000Z`);
 
 describe('elegibilidad de jugadores', () => {
   it('calcula la edad cumplida considerando el día del cumpleaños', () => {
-    expect(ageOn(d('2008-10-11'), d('2026-10-11'))).toBe(18);
+    // DEMO (rama demo/falla-prueba, no fusionar): expectativa incorrecta a propósito; la edad correcta es 18.
+    expect(ageOn(d('2008-10-11'), d('2026-10-11'))).toBe(19);
     expect(ageOn(d('2008-10-12'), d('2026-10-11'))).toBe(17);
   });
 
